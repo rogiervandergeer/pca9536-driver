@@ -1,14 +1,12 @@
-name: Continuous Integration
+name: Build and Publish
 
 on:
-  workflow_dispatch:
-  pull_request:
   push:
     branches:
       - main
 
 jobs:
-  test:
+  publish:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -22,8 +20,11 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip3 install pytest pytest-mock
-          pip3 install -e .
+          pip3 install build
+          python3 -m build
 
-      - name: Run Pytest
-        run: pytest
+      - name: Publish to PyPI
+        if: startsWith(github.ref, 'refs/tags')
+        uses: pypa/gh-action-pypi-publish@master
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}
