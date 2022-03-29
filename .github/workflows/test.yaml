@@ -20,13 +20,10 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Build the Package
-        run: python -m build
-
       - name: Install Dependencies
         run: |
           pip3 install pytest pytest-mock
-          pip3 install build/*.whl
+          pip3 install -e .
 
       - name: Run Pytest
         run: pytest
