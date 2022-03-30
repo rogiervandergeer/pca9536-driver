@@ -33,7 +33,7 @@ class PCA9536Pin:
 
     @mode.setter
     def mode(self, value: Union[PinMode, str]) -> None:
-        self.device.mode = self._value_to_list(value)
+        self.device.mode = self._value_to_list(value)  # type: ignore
 
     @property
     def polarity_inversion(self) -> bool:
@@ -47,7 +47,7 @@ class PCA9536Pin:
 
     @polarity_inversion.setter
     def polarity_inversion(self, value: bool) -> None:
-        self.device.polarity_inversion = self._value_to_list(value)
+        self.device.polarity_inversion = self._value_to_list(value)  # type: ignore
 
     def read(self) -> bool:
         """Read the current logic level.

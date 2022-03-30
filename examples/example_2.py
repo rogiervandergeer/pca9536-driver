@@ -1,3 +1,4 @@
+# This example is functionally the same as example 0, but uses the simultaneous interface
 from pca9536 import PCA9536
 from smbus2 import SMBus
 
