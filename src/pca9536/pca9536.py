@@ -11,6 +11,7 @@ class PinMode(Enum):
 
 class PCA9536Pin:
     """A single pin of the PCA9536 GPIO expander."""
+
     def __init__(self, device: "PCA9536", index: int):
         """Initialise the PCA9536Pin.
 
@@ -73,6 +74,7 @@ class PCA9536Pin:
 
 class PCA9536:
     """Driver for the PCA9536 GPIO expander."""
+
     def __init__(self, bus: SMBus, address: int = 0x41):
         """Initialise the PCA9536.
 

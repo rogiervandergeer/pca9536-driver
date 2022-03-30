@@ -94,4 +94,4 @@ device.polarity_inversion = False
 # or
 device.polarity_inversion = False, True, True, None
 ```
-Where `None` will leave the current polarity inversion of a pin untouched.
+where `None` will leave the current polarity inversion of a pin untouched.
