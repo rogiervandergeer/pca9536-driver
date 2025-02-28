@@ -1,3 +1,32 @@
 [build-system]
-requires = ["setuptools >= 40.6.0", "wheel"]
+requires = ["setuptools >= 45", "setuptools_scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "pca9536-driver"
+authors = [
+    {name = "Rogier van der Geer", email = "rogier@vander-geer.nl"},
+]
+description = "Python driver for the PCA9536 GPIO expander."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "Apache License 2.0"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Topic :: System :: Hardware :: Hardware Drivers",
+    "Typing :: Typed",
+]
+dependencies = [
+    "smbus2 >= 0.3.0"
+]
+dynamic = ["version"]
+
+[project.urls]
+Repository = "https://github.com/rogiervandergeer/pca9536-driver"
+
+[tool.setuptools.package-data]
+pca9536 = ["py.typed"]
+
+[tool.setuptools_scm]
+write_to = "src/pca9536/_version.py"
