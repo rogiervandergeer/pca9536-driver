@@ -1,7 +1,7 @@
 # pca9536-driver
 Easy-to-use python driver for the PCA9536 GPIO expander.
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/rogiervandergeer/pca9536-driver/Continuous%20Integration) 
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/rogiervandergeer/pca9536-driver/test.yaml?branch=main) 
 ![PyPI](https://img.shields.io/pypi/v/pca9536-driver)
 ![PyPI - License](https://img.shields.io/pypi/l/pca9536-driver)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/pca9536-driver) 
